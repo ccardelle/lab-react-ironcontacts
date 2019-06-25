@@ -38,22 +38,7 @@ class App extends Component {
 
       let comp = 0;
       if (nameA > nameB) {
-        comp = 1;
-      } else if (nameA < nameB) {
-        comp = -1;
-      }
-      return comp;
-    };
-
-    contactsCopy.sort(comp);
-
-    this.setState({
-      contacts: contactsCopy
-    });
-  };
-
-  sortPopularity = () => {
-    let contactsCopy = [...this.state.contacts];
+        comp  
     let comp = (a, b) => {
       const popA = a.popularity;
       const popB = b.popularity;
@@ -69,7 +54,7 @@ class App extends Component {
 
     contactsCopy.sort(comp);
 
-    console.log("SORT ISSUED");
+    
     this.setState({
       contacts: contactsCopy
     });
@@ -141,5 +126,7 @@ class App extends Component {
     );
   }
 }
+
+// Used for testing inital React lessons --
 
 export default App;
